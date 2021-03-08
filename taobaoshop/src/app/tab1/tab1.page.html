@@ -1,16 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-buttons slot="start">
+        <img src="/assets/qrcode.png">
+    </ion-buttons>
+
+    <ion-searchbar placeholder="请你输入关键词" animated></ion-searchbar>
+
+    <ion-buttons slot="end" class="message">
+        <img src="/assets/message.png">
+        <ion-badge color="danger" mode="ios" class="badge">4</ion-badge>
+      </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-button>
-    Click me
-  </ion-button>
-  <ion-button [routerLink]="['/search']">
-    search
-  </ion-button>
+<ion-content >
+ <ion-slides mode="ios" pager="true" #slide1 [options]="slidesOpts" (ionSlideTouchEnd)="slideEnd()">
+   <ion-slide *ngFor="let item of slidesList">
+     <img [src]="item.pic">
+   </ion-slide>
+ </ion-slides>
+
+
+ <div class="h-title">
+  猜你喜欢
+ </div>
+
+ <div class="hotlist">
+  <ul class="clearfix" [ngStyle]="{'width': hotListWidth}">
+    <li *ngFor="let item of hotList">
+        <img [src]="item.pic">
+    <p>{{item.title}}</p>
+    </li>
+  </ul>
+ </div>
 </ion-content>
