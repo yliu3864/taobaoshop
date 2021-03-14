@@ -20,7 +20,9 @@ export class Tab1Page {
 
   public hotList:any[]=[];
 
-  public hotListWidth:any;
+  public hotListWidth:any = 400;
+
+  public pList:any[]= [];
 
   constructor() {
 
@@ -33,7 +35,6 @@ export class Tab1Page {
     }
 
     for(var i=1;i<=9;i++){
-
       this.hotList.push({
         pic:'assets/0'+i+'.jpg',
         title:'第'+i+'个',
@@ -41,6 +42,13 @@ export class Tab1Page {
     }
 
     this.hotListWidth = this.hotList.length*9+'rem';
+
+    for(var i=1;i<=12;i++){
+      this.pList.push({
+        pic:'assets/list'+i+'.jpg',
+        title:'第'+i+'个',
+      })
+    }
   }
   slideEnd(){
     this.slide1.startAutoplay()
