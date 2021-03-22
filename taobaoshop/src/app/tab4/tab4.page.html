@@ -1,19 +1,50 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tab4</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="center">
-<span id=1 style="visibility: hidden">
-  11111
-</span>
-<span id=2 style="visibility: hidden">
-  222222
-</span>
-<span id=3 style="visibility: hidden">
-  333333
-</span>
-</div>
+
+  <!-- <div class="user_top">
+    <div class="user_left">
+      <img src="assets/user.png">
+    </div>
+    <div class="user_right">
+       <h4>用户名：炎哥</h4>
+       <p>普通会员</p>
+      </div>
+  </div> -->
+
+  <div class="user_top">
+      <div class="user_left">
+        <img src="assets/user.png">
+      </div>
+      <div class="user_right">
+         <p>登陆/注册 <ion-icon slot="start" name="arrow-forward"></ion-icon></p>
+        </div>
+    </div>
+
+ <ion-list class="user_list">
+    <ion-item-divider>
+      </ion-item-divider>
+   <ion-item>
+      <ion-icon slot="start" name="document" color="danger"></ion-icon>
+      <span>全部订单</span>
+   </ion-item>
+   <ion-item>
+      <ion-icon slot="start" name="card" color="success"></ion-icon>
+      <span>待付款</span>
+   </ion-item>
+   <ion-item lines="none">
+      <ion-icon slot="start" name="subway" color="success"></ion-icon>
+      <span>待收货</span>
+   </ion-item>
+
+   <ion-item-divider>
+   </ion-item-divider>
+
+   <ion-item>
+      <ion-icon slot="start" name="star" color="tertiary"></ion-icon>
+      <span>我的收藏</span>
+   </ion-item>
+   <ion-item>
+      <ion-icon slot="start" name="people" color="secondary"></ion-icon>
+      <span>在线客服</span>
+   </ion-item>
+ </ion-list>
 </ion-content>

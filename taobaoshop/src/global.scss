@@ -33,6 +33,10 @@ body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, d
 html{
   font-size: 62.5%;
 }
+
+body{
+  font-size: 1.4rem;
+}
 .clearfix{
 
   &::after{
