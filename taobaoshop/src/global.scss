@@ -55,3 +55,14 @@ ul,li{
 .price{
   color: red;
 }
+
+.message{
+
+  position: relative;
+  .badge{
+    position: absolute;
+    top:-1px;
+
+    font-size: 1rem,
+  }
+}

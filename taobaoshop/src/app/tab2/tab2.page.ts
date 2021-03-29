@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -11,7 +12,7 @@ export class Tab2Page {
 
   public rCateList:any[]= [];
 
-  constructor() {
+  constructor(public navController:NavController) {
 
     for(var i=1;i<=20;i++){
       this.lCateList.push(`分类${i}`)
@@ -25,4 +26,7 @@ export class Tab2Page {
     }
   }
 
+  goSearch(){
+    this.navController.navigateForward('/search');
+  }
 }

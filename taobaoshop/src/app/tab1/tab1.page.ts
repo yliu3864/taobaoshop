@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -24,7 +25,7 @@ export class Tab1Page {
 
   public pList:any[]= [];
 
-  constructor() {
+  constructor(public navController:NavController) {
 
     for(var i=1;i<=3;i++){
 
@@ -52,5 +53,9 @@ export class Tab1Page {
   }
   slideEnd(){
     this.slide1.startAutoplay()
+  }
+
+  goSearch(){
+    this.navController.navigateForward('/search');
   }
 }

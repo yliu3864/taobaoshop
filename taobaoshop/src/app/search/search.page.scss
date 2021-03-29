@@ -1,0 +1,41 @@
+.search_content {
+  .search_title {
+    font-size: 1.6rem;
+
+    font-weight: bold;
+
+    padding: 0.5rem;
+  }
+
+  .hotlist {
+    p {
+      padding: 0.5rem;
+
+      span {
+        padding: 0.5rem;
+
+        background: #eee;
+
+        margin: 0.5rem 0.5rem;
+
+        border-radius: 0.5rem;
+
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.history {
+  .search_title {
+    font-size: 1.6rem;
+
+    font-weight: bold;
+
+    padding: 0.5rem;
+  }
+  ion-item {
+    padding: 0.5rem;
+    font-size: 1.4rem;
+  }
+}
