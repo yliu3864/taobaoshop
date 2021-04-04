@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPage implements OnInit {
 
-  constructor() { }
+  flag=true;
+  productList=[];
+
+  constructor() {
+    for(var i=1;i<=9;i++){
+      this.productList.push({
+        pic:'assets/0'+i+'.jpg',
+        title:'第'+i+'个',
+        price:i*22,
+      })
+    }
+   }
 
   ngOnInit() {
   }
 
+  doSearch(){
+    this.flag = false;
+  }
 }

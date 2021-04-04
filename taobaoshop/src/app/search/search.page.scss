@@ -39,3 +39,30 @@
     font-size: 1.4rem;
   }
 }
+
+.sub_toobar{
+
+  --min-height:3rem;
+
+
+  .subheader{
+
+    border-top: 1px solid#eee;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    div{
+      flex: 1;
+      text-align: center;
+    }
+  }
+}
+
+.list_content{
+
+  ion-label{
+
+    white-space: normal;
+    padding-left: 14px;
+  }
+}
