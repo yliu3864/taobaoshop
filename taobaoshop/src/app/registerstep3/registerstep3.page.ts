@@ -12,4 +12,7 @@ export class Registerstep3Page implements OnInit {
   ngOnInit() {
   }
 
+  doResigter(){
+
+  }
 }
