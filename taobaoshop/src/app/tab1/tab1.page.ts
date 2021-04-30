@@ -60,6 +60,12 @@ export class Tab1Page {
   }
 
   getHotData(){
+    var api='api/plist?is_hot=1';
+    this.common.ajaxGet(api).then((res)=>{
+      // console.log(res);
+    })
+
+
     for(var i=1;i<=9;i++){
       this.hotList.push({
         pic:'assets/0'+i+'.jpg',
@@ -72,7 +78,10 @@ export class Tab1Page {
   }
 
   getProductList(){
-
+    var api='api/plist?is_best=1';
+    this.common.ajaxGet(api).then((res)=>{
+      // console.log(res);
+    })
     for(var i=1;i<=12;i++){
       this.pList.push({
         pic:'assets/list'+i+'.jpg',
