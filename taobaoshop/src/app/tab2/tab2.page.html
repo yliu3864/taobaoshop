@@ -28,7 +28,7 @@
     <div class="cate_right">
       <ion-grid fixed>
         <ion-row>
-          <ion-col size="4" *ngFor="let item of rCateList">
+          <ion-col size="4" *ngFor="let item of rCateList" [routerLink]="['/productlist']" [queryParams]="{cid:item._id}">
             <img [src]="config.domain+item.pic">
             <p>{{item.title}}</p>
           </ion-col>
