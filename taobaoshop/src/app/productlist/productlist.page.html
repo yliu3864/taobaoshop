@@ -14,9 +14,10 @@
 
   <ion-toolbar class="sub_toobar">
       <div class="subheader">
-          <div>综合</div>
-          <div>销量</div>
-          <div>价格</div>
+          <div *ngFor="let item of subHeaderList" (click)="subHeaderChange(item.id)" [ngClass]="{'active':subHeaderSelected==item.id}">
+            {{item.title}}
+          </div>
+
       </div>
     </ion-toolbar>
 </ion-header>
