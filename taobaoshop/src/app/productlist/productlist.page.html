@@ -38,7 +38,7 @@
       </ion-item>
     </ion-list>
 
-    <ion-infinite-scroll threshold="100px" (ionInfinite)="getProductList($event)">
+    <ion-infinite-scroll *ngIf="hasInfinitData" threshold="100px" (ionInfinite)="getProductList($event)">
         <ion-infinite-scroll-content
           loadingSpinner="bubbles"
           loadingText="加载更多...">

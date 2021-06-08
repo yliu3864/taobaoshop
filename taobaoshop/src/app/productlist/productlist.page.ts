@@ -20,6 +20,7 @@ export class ProductlistPage implements OnInit {
   subHeaderList:any[]=[];
   subHeaderSelected:any=1;
   sort;
+  hasInfinitData = true;
 
   constructor(private common:CommonService,private activateRoute:ActivatedRoute) {
     this.config=this.common.config;
@@ -66,7 +67,8 @@ export class ProductlistPage implements OnInit {
       event?event.target.complete():'';
 
       if(res.result.length<10){
-        event?event.target.disable=true:'';
+        // event?event.target.disable=true:'';
+        this.hasInfinitData = false;
       }
     })
   }
@@ -79,6 +81,7 @@ export class ProductlistPage implements OnInit {
     this.subHeaderSelected=id;
     this.sort=this.subHeaderList[id-1].fields+'_'+this.subHeaderList[id-1].sort;
     this.page=1;
+    this.hasInfinitData = true;
     this.productList=[];
     this.subHeaderList[id-1].sort=this.subHeaderList[id-1].sort*-1;
     this.content.scrollToTop(0);
