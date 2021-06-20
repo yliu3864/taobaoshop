@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonService } from '../services/common.service';
-import { IonContent } from '@ionic/angular';
+import { IonContent, AlertController } from '@ionic/angular';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-search',
@@ -19,8 +20,12 @@ export class SearchPage implements OnInit {
   subHeaderList:any[]=[];
   subHeaderSelected:any=1;
   sort;
+  historyList=[];
 
-  constructor(private common: CommonService, ) {
+  constructor(
+    private common: CommonService,
+    private storage: StorageService,
+    private alertController: AlertController) {
     this.config = this.common.config;
     this.subHeaderList=[
       {
@@ -45,9 +50,11 @@ export class SearchPage implements OnInit {
   }
 
   ngOnInit() {
+    this.getHistory();
   }
 
   doSearch() {
+    this.saveHistory();
     this.flag = false;
     this.hasInfinitData = true;
     this.page = 1;
@@ -102,5 +109,56 @@ export class SearchPage implements OnInit {
     this.content.scrollToTop(0);
 
     this.getProductList(null);
+  }
+
+  saveHistory(){
+    var list=this.storage.get('histroylist');
+    if(list){
+      if(list.indexOf(this.keywords)==-1){
+        list.push(this.keywords);
+      }
+      this.storage.set('histroylist',list);
+    }else{
+      list=[]
+      list.push(this.keywords);
+      this.storage.set('histroylist',list);
+    }
+
+  }
+
+  getHistory(){
+    var list=this.storage.get('histroylist');
+    this.historyList = list? list: null;
+  }
+
+  async removeHistory(key) {
+    const alert = await this.alertController.create({
+      backdropDismiss: false,
+      header: '提示!',
+      message: '确定要删除吗？',
+      buttons: [
+        {
+          text: '取消',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+
+          }
+        }, {
+          text: '确认',
+          handler: () => {
+            this.historyList.splice(key,1);
+            this.storage.set('histroylist',this.historyList)
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  goSearch(keywords){
+    this.keywords=keywords;
+    this.doSearch();
   }
 }

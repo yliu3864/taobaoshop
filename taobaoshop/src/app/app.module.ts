@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CommonService } from './services/common.service';
-
+import { StorageService} from './services/storage.service';
 
 
 @NgModule({
@@ -24,6 +24,7 @@ import { CommonService } from './services/common.service';
   AppRoutingModule],
   providers: [
     CommonService,
+    StorageService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
