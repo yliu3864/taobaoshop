@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/tabs/tab1" color="dark"></ion-back-button>
+        </ion-buttons>
+      <ion-segment [(ngModel)]="tab" color="danger">
+        <ion-segment-button value="list">
+          <ion-label>商品</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="content">
+          <ion-label>详情</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="tab">
+    <div *ngSwitchCase="'list'">
+      商品数据
+    </div>
+
+    <div *ngSwitchCase="'content'">
+      商品详情
+    </div>
+  </div>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+   <div class="footer_bar">
+    <div class="carticon">
+      <ion-icon slot="start" name="cart"></ion-icon>
+      <p>购物车</p>
+      <ion-badge color="danger" mode="ios">1</ion-badge>
+    </div>
+    <div class="addcart">
+      加入购物车
+    </div>
+    <div class="buy">
+      购买
+    </div>
+   </div>
+  </ion-toolbar>
+</ion-footer>

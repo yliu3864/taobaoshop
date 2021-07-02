@@ -1,0 +1,45 @@
+.footer_bar{
+  display: flex;
+
+  .carticon{
+    width: 6.6rem;
+    position: relative;
+    text-align: center;
+
+    ion-icon{
+      font-size: 2.8rem;
+      color: #999;
+    }
+
+    p{
+      text-align: center;
+      font-size: 1.4rem;
+      color: #999;
+
+    }
+
+    ion-badge{
+      position: absolute;
+      right: 0.5rem;
+      top:-2px;
+    }
+  }
+
+  .addcart{
+    flex: 1;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    background: orange;
+    color: #fff;
+  }
+
+  .buy{
+    flex: 1;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    background: red;
+    color: #fff;
+  }
+}
