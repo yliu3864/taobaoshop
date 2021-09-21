@@ -15,13 +15,65 @@
 </ion-header>
 
 <ion-content>
-  <div [ngSwitch]="tab">
-    <div *ngSwitchCase="'list'">
-      商品数据
+  <div [ngSwitch]="tab" class="p_content">
+
+    <div *ngSwitchCase="'list'" class="con_1">
+      <div class="p_img">
+        <img src="assets/02.jpg" alt="">
+      </div>
+      <div class="p_info mb10">
+        <div class="p_title">
+          <h2>德国进口</h2>
+          <p>真吃货</p>
+        </div>
+        <div class="p_price mb10">
+          <span class="now_price"> 特价: <span class="price">$123</span>   原价: <span class="old_price"> $22222</span></span>
+        </div>
+      </div>
+
+      <div class="p_attr mb10">
+        <div class="attr">
+          <strong>颜色：</strong>
+          <span>白色</span>
+          <span>红色</span>
+          <span>蓝色</span>
+          <span>红色</span>
+          <span>黄色</span>
+          <span>白色</span>
+        </div>
+
+        <div class="attr">
+          <strong>面料：</strong>
+          <span>牛皮</span>
+          <span>纺织</span>
+
+        </div>
+
+        <div class="number">
+          <strong>数量:</strong>
+          <div class="cart_number">
+            <div class="input_left">-</div>
+            <div class="input_center">
+              <input type="text" name="num" id="num" value="1" readonly='readonly'>
+            </div>
+            <div class="input_right">+</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="fee mb10">
+        运费：免运费
+      </div>
+
+
+
     </div>
 
-    <div *ngSwitchCase="'content'">
-      商品详情
+    <div *ngSwitchCase="'content'" class="con_2">
+      <p>商品详情</p>
+
+      <img src="assets/03.jpg" alt="">
     </div>
   </div>
 

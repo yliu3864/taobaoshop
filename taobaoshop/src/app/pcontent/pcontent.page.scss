@@ -43,3 +43,131 @@
     color: #fff;
   }
 }
+
+
+.p_content{
+
+  background: #efefef;
+
+  .con_1{
+
+    .p_img{
+      width: 100%;
+      height: 15rem;
+
+      img{
+        width: 100%;
+        height: 15rem;
+      }
+    }
+
+    .p_info{
+      padding: .5rem;
+      background: #fff;
+      .p_title{
+        h2{
+          font-size: 1.6rem;
+          line-height: 1.5;
+          padding-bottom: .5rem;
+        }
+        p{
+          font-size: 1.4rem;
+          color: #666;
+          line-height: 1.5;
+        }
+
+        padding-bottom: .5rem;
+      }
+
+      .p_price{
+        .now_price{
+
+          .price{
+            color: red;
+            font-size: 2.4rem
+          }
+
+        }
+        .old_price{
+          color: #666;
+          font-size: 1.4rem;
+          text-decoration: line-through
+        }
+      }
+
+    }
+
+    .p_attr{
+      background: #fff;
+      padding: 0.5rem;
+      padding-bottom: 1rem;
+
+      .attr{
+        padding-bottom: .5rem;
+
+        span{
+          border: 1px solid #eee;
+          border-radius: .5rem;
+          padding: .5rem 1rem;
+
+          display:inline-block;
+          margin: .5rem;
+        }
+
+      }
+
+      .number{
+        .cart_number{
+          float: right;
+          width: 100px;
+          display: flex;
+
+          .input_left,.input_right{
+            width: 38px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            background: #f8f8f8;
+            border: 1 solid #f8f8f8;
+          }
+
+          .input_center{
+            flex:1;
+            height: 28px;
+            line-height: 28px;
+            input{
+              border:1px solid #f8f8f8;
+              height: 28px;
+              line-height: 28px;
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    .fee{
+      background: #fff;
+      padding: .5rem;
+      margin-bottom: 2rem;
+    }
+
+  }
+
+  .con_2{
+    background: #fff;
+    line-height: 2;
+    padding: 0.5rem;
+
+    img{
+      max-width: 90%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+
+}
